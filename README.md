@@ -22,52 +22,50 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-## membersテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|
-|group_id|integer|
-|name|string|
-|password|integer|
+|name|string|null: false, index: true|
 
 ### Association
-- has_many: group through: :members_group
-- has_many: messages
 - has_many: mambers
+- has_many: group through: :members
+- has_many: messages
+
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|
-|group_id|integer|
 |group_name|string|
 
 ### Association
 - has_many: messages
-- has_many: members through: :members_group
-- has_many: members_group
+- has_many: members
+- has_many: users through: :members
+
 
 ## members_groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|
-|group_id|integer|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association 
-- belong_to: members
-- belong_to: groups
+- belong_to: user
+- belong_to: group
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |body|text|
 |image|string|
-|group_id|integer|
-|user_id|integer|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association 
-- belong_to: members_groups
+- belong_to: user
+- belong_to: group
 
 
 
