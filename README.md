@@ -4,7 +4,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, index: true|
+|name|string|null: false, index unique：true|
 
 ### Association
 - has_many: mambers
