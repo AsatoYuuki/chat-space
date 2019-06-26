@@ -1,7 +1,6 @@
 # README
 
 ## usersテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, index unique：true|
