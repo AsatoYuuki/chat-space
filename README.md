@@ -10,7 +10,6 @@
 - has_many: group through: :members
 - has_many: messages
 
-
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
