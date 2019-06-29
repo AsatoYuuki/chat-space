@@ -6,14 +6,14 @@
 |name|string|null: false, index unique：true|
 
 ### Association
-- has_many: mambers
-- has_many: group through: :members
+- has_many: members
+- has_many: groups through: :members
 - has_many: messages
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|
+|group_name|string|null: false|
 
 ### Association
 - has_many: messages
