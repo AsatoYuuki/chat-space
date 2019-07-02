@@ -21,7 +21,7 @@
 - has_many: users through: :members
 
 
-## members_groupテーブル
+## membersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
