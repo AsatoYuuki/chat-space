@@ -25,6 +25,22 @@
       color: white;
       font-size: 16px;
     }  
+    .groups{
+      height: calc(100vh - 100px);
+      background-color: #2f3e51;
+      padding: 20px 20px 0;
+      overflow: scroll;
+      .group{
+      margin-bottom: 40px;
+        &__name{
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+        &__message{
+          font-size: 11px;
+        }
+      }
+    } 
   }
 
   .edit{
@@ -35,15 +51,7 @@
     margin-left: 0.3rem;
   }
 
-  .groups{
-    height: calc(100vh - 100px);
-    background-color: #2f3e51;
-    padding: 20px 20px 0;
-    overflow: scroll;
-    &__box{
-      margin-bottom: 40px;
-    }
-  } 
+  
 
   .main-chat{
     width: calc(100vw - 300px);

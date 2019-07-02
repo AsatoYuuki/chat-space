@@ -1,18 +1,7 @@
 .flash-box
   .wrapper
     .side-chat
-      .side-chat__left
-        .left-chat__user-name
-          結城麻人
-        %ul
-          %li.edit
-            = fa_icon 'edit', class: 'fas'
-          %li.cog
-            = fa_icon 'cog', class: 'fas'
-      .groups
-        .group__box
-          猫猫クラブ
-
+      = render "side-chat"
     .main-chat 
       .main-chat__header
         .main-chat__header__box
