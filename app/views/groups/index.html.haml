@@ -1,35 +1,3 @@
-.flash-box
-  .wrapper
-    .side-chat
-      = render "side-chat"
-    .main-chat 
-      .main-chat__header
-        .main-chat__header__box
-          .main-chat__header__name
-            メビウス
-          .main-chat__header__member
-            今日ウェ！
-        .main-chat__header__edit
-          Edit
-
-      .massage
-        .massage__box
-          .massage__box__name
-            ユウキ
-            .massage__box__info
-              行こうぜえええええええええ
-          .massage__box__text
-            sakamoto
-
-      .form-in
-        .form-in__input
-          %label.form-in__input__image
-            = fa_icon 'image', class: 'far' 
-            %input.form-in__input__image__file{name:  "message[image]", type:  "file"}/  
-        .form-in__sent
-          Send
-  
-
-
-
-
+.wrapper
+  .side-chat
+    = render "side-chat"

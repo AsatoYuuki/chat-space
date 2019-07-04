@@ -1,0 +1,34 @@
+.flash-box
+  .wrapper
+    .side-chat
+      = render "groups/side-chat"
+    .main-chat 
+      .main-chat__header
+        .main-chat__header__box
+          .main-chat__header__name
+            メビウス
+          .main-chat__header__member
+            今日ウェ！
+        .main-chat__header__edit
+          Edit
+
+      .massage
+        .massage__box
+          .massage__box__name
+            ユウキ
+            .massage__box__info
+              行こうぜえええええええええ
+          .massage__box__text
+            sakamoto
+
+      .form
+        .form__new_message
+          .form__new_message__input-box
+            = form_for [@group, @message] do |f|
+              = f.text_field :body, class: 'form__new_message__input-box__text', placeholder: 'type a message' 
+              = f.label :image, class: 'form__new_message__input-box__text__image' do
+                = fa_icon 'image', class: 'far' 
+                = f.file_field :image, class: 'form__new_message__input-box__text__image__file' 
+              = f.submit 'Send', class: 'form__new_message__sent'
+
+
