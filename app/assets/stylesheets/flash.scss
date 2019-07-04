@@ -1,5 +1,8 @@
 .notification {
-  .notice {
+  position: fixed;
+  z-index: 100%;
+  width: 100%;
+   .notice {
     background-color: $light_blue;
     color: $white;
     text-align: center;

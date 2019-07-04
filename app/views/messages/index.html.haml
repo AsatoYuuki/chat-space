@@ -10,16 +10,11 @@
           .main-chat__header__member
             今日ウェ！
         .main-chat__header__edit
-          Edit
+          = link_to "Edit", edit_group_path(@group.id), class: 'main-chat__header__edit__box'
+          -# class:"main-chat__header__edit__box"
 
-      .massage
-        .massage__box
-          .massage__box__name
-            ユウキ
-            .massage__box__info
-              行こうぜえええええええええ
-          .massage__box__text
-            sakamoto
+      .message
+        = render @messages
 
       .form
         .form__new_message

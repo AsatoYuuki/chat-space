@@ -1,8 +1,10 @@
 
+*{
+  box-sizing: border-box;
+}
+
 .wrapper{
-  *{
-    box-sizing: border-box;
-  }
+  
   
 
   .side-chat{
@@ -47,6 +49,7 @@
 
   .edit{
     margin-left: 0.3rem;
+    color: #fff;
   }
 
   .cog{
@@ -90,6 +93,10 @@
           margin-top: 30px;
           border: solid 1px #38aef0;
           color: #38aef0;
+          &__box{
+            color: #38aef0;
+            text-decoration: none;
+          }
       }
     }
 
@@ -101,28 +108,35 @@
 
   }
   
-  .massage{
+  .message{
     height: calc(100vh - 190px);
     padding: 46px 40px;
     background-color: #fafafa;
     &__box{
       padding-bottom: 40px;
-      &__name{
+      &__for{
         display: flex;
         margin-bottom: 10px;
+        &__name{
+        color: #434a54;
+        font-size: 16px;
         font-weight: bold;
-      }
+        }
         &__info{
           color: #999999;
           font-size: 12px;
           margin-left: 10px;
         }
+        }
+      
     &__text{
       color: #434A54;
       font-size: 14px;
+      margin-bottom: 10px;
     }
     }
-  }
+    }
+  
     
   
   
@@ -145,12 +159,15 @@
           padding: 0 40px 0 10px;
           color: #434a54;
           border-style: none;
+          float: left;
           &__image{
             font-size: 1.3rem;
             position: absolute;
             top: 10px;
             right: 130px;
+            padding-right: 10px;
             cursor: pointer;
+            float:left;
             &__file{
               display: none;
             }

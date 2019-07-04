@@ -7,8 +7,8 @@ class MessagesController < ApplicationController
   end
 
   def create 
-    @messages = @group.messages.new(message_params)
-    if @messages.save 
+    @message = @group.messages.new(message_params)
+    if @message.save 
       redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
     else  
       @messages = @group.messages.includes(:user)
@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
   end
 
   def message_params
-    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
+    params.require(:message).permit(:body, :image).merge(user_id: current_user.id)
   end
 
   def set_group
