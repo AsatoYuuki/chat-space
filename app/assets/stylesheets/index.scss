@@ -1,8 +1,10 @@
 
+*{
+  box-sizing: border-box;
+}
+
 .wrapper{
-  *{
-    box-sizing: border-box;
-  }
+  
   
 
   .side-chat{
@@ -35,9 +37,11 @@
         &__name{
           font-size: 15px;
           margin-bottom: 5px;
+          color: #fff;
         }
         &__message{
           font-size: 11px;
+          color: #fff;
         }
       }
     } 
@@ -45,10 +49,15 @@
 
   .edit{
     margin-left: 0.3rem;
+    color: #fff;
   }
 
   .cog{
     margin-left: 0.3rem;
+  }
+
+  .icon{
+    color: #fff;
   }
 
   
@@ -84,6 +93,10 @@
           margin-top: 30px;
           border: solid 1px #38aef0;
           color: #38aef0;
+          &__box{
+            color: #38aef0;
+            text-decoration: none;
+          }
       }
     }
 
@@ -95,28 +108,35 @@
 
   }
   
-  .massage{
+  .message{
     height: calc(100vh - 190px);
     padding: 46px 40px;
     background-color: #fafafa;
     &__box{
       padding-bottom: 40px;
-      &__name{
+      &__for{
         display: flex;
         margin-bottom: 10px;
+        &__name{
+        color: #434a54;
+        font-size: 16px;
         font-weight: bold;
-      }
+        }
         &__info{
           color: #999999;
           font-size: 12px;
           margin-left: 10px;
         }
+        }
+      
     &__text{
       color: #434A54;
       font-size: 14px;
+      margin-bottom: 10px;
     }
     }
-  }
+    }
+  
     
   
   
@@ -124,43 +144,52 @@
   
   
 
-  .form-in{
+  .form{
     height: 90px;
     padding: 20px 40px;
     background-color: #ddd;
-    display: flex;
-    width: 100%;
-    &__input{
-      background-color: #eee;
-      height: 50px;
-      width: 100%;
-      position: relative;
-      text-align: center;
-      &__image {
-        font-size: 1.3rem;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        float: right;
-        &__file {
-        display: none;
+    &__new_message{
+      display: flex;
+      &__input-box{
+        position: relative;
+        width: 100%;
+        &__text {
+          height: 50px;
+          width: calc(100% - 115px);
+          padding: 0 40px 0 10px;
+          color: #434a54;
+          border-style: none;
+          float: left;
+          &__image{
+            font-size: 1.3rem;
+            position: absolute;
+            top: 10px;
+            right: 130px;
+            padding-right: 10px;
+            cursor: pointer;
+            float:left;
+            &__file{
+              display: none;
+            }
           }
         }
       }
-    &__sent{
-      width: 100px;
-      height: 50px;
-      padding: 12px 30px;
-      margin-left: 15px;
-      background-color: #38aef0;
-      color: white;
-      float: right;
-      cursor: pointer;
-       }
+        &__sent{
+          width: 100px;
+          height: 50px;
+          padding: 12px 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+          float: right;
+          cursor: pointer;
+           }
+          
+      }
+    
       
       }
+      
 ul{
   display: flex;
  }  
-
