@@ -3,16 +3,7 @@
     .side-chat
       = render "groups/side-chat"
     .main-chat 
-      .main-chat__header
-        .main-chat__header__box
-          .main-chat__header__name
-            メビウス
-          .main-chat__header__member
-            今日ウェ！
-        .main-chat__header__edit
-          = link_to "Edit", edit_group_path(@group.id), class: 'main-chat__header__edit__box'
-          -# class:"main-chat__header__edit__box"
-
+      = render "main-chat"
       .message
         = render @messages
 

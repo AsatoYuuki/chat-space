@@ -1,0 +1,11 @@
+.main-chat__header
+  .main-chat__header__box
+    .main-chat__header__name
+      = @group.name
+    .main-chat__header__member
+      Member :
+      - @group.users.each do |member|
+        = member.name
+  .main-chat__header__edit
+    = link_to "Edit", edit_group_path(@group.id), class: 'main-chat__header__edit__box'
+    -# class:"main-chat__header__edit__box"
