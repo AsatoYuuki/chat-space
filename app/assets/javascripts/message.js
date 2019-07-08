@@ -39,11 +39,11 @@ $(function() {
       .done(function(data){
         var html = buildHTML(data);
         $('.message').append(html);
-        $('#message_body').val('');
-        $('#message_image').val('');
+        $('form')[0].reset();
+        $('form')[0].reset();
         $('.message').animate({scrollTop: $('.message')[0].scrollHeight });
       })
-     
+      
       .fail(function(data){
         alert('エラーが発生したためメッセージは送信できませんでした。');
       })
