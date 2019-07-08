@@ -40,7 +40,6 @@ $(function() {
         var html = buildHTML(data);
         $('.message').append(html);
         $('form')[0].reset();
-        $('form')[0].reset();
         $('.message').animate({scrollTop: $('.message')[0].scrollHeight });
       })
       
