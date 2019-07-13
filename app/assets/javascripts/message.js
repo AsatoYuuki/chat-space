@@ -49,13 +49,9 @@ $(function() {
         
     var reloadMessages = function() {
       if (window.location.href.match(/\/groups\/\d+\/messages/)){
-        //カスタムデータ属性を利用し、ブラウザに表示されている最新メッセージのidを取得
         var last_message_id = $('.message__box:last').data("messages-id");
-        console.log(last_message_id);
         var grouping = $('.main-chat__header').data('group-id');
         var url = "groups/" + grouping  + "/api/messages";
-        console.log(url)
-        console.log(grouping)
         $.ajax({
           url: "api/messages",
           type: 'get',
@@ -65,11 +61,8 @@ $(function() {
         })
         .done(function(messages) {
           var insertHTML = '';
-          console.log(insertHTML);
-          console.log(messages);
           messages.forEach(function (message) {
             insertHTML = buildHTML(message);
-            console.log(insertHTML);
             $('.message').append(insertHTML);
           })
           $('.message').animate({scrollTop: $('.message')[0].scrollHeight });
@@ -80,8 +73,6 @@ $(function() {
         });
         
       };
-      };
-        setInterval(reloadMessages, 5000);
-
-
+    };
+    setInterval(reloadMessages, 5000);
 });
