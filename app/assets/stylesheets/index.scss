@@ -21,12 +21,16 @@
       width: 100%;
       font-weight: bold;
       box-sizing:border-box;
-      }
+      
     }
     &__user-name{
       color: white;
       font-size: 16px;
     }  
+    .fas{
+          color:#fff;
+        }
+  }
     .groups{
       height: calc(100vh - 100px);
       background-color: #2f3e51;
@@ -43,6 +47,7 @@
           font-size: 11px;
           color: #fff;
         }
+        
       }
     } 
   }
@@ -54,6 +59,7 @@
 
   .cog{
     margin-left: 0.3rem;
+    color: #fff;
   }
 
   .icon{
